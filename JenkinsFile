@@ -10,7 +10,7 @@ pipeline{
     stage('Build and push image'){
         steps{
             sh 'docker build -t flask-app .'
-            sh 'docker tage myapp:latest rishik21/flask-app:v1'
+            sh 'docker tage myapp:latest rishik2/flask-app:v1'
             sh 'docker push rishik21/flask-app:v1'
         }
     }
