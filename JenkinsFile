@@ -18,11 +18,12 @@ pipeline {
         }
 
         stage('Deploy with Docker Compose') {
-            steps {
-                sh 'docker-compose down || true'
-                sh 'docker-compose up -d --build'
-            }
-        }
+           steps {
+               sh 'docker compose version'
+               sh 'docker compose down || true'
+               sh 'docker compose up -d --build'
+    }
+}
 
     }
 }
