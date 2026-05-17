@@ -1,0 +1,26 @@
+pipeline{
+    agent any 
+    stages('clone repo'){
+        steps{
+           git branch: 'main', url: 'https://github.com/Rishik2121/DevOps-Project-Two-Tier-Flask-App'
+        }
+    
+    }
+
+    stage('Build and push image'){
+        steps{
+            sh 'docker build -t flask-app .'
+            sh 'docker tage myapp:latest rishik21/flask-app:v1'
+            sh 'docker push rishik21/flask-app:v1'
+        }
+    }
+
+    stage('Deploy with docker compose'){
+        steps{
+            sh 'docker compose down || true'
+            sh 'docker compose up -d --build'
+        }
+    }
+
+}
+
