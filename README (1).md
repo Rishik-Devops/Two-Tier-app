@@ -113,7 +113,7 @@ This document outlines the step-by-step process for deploying a 2-tier web appli
 
 ### **5. Step 3: Jenkins Installation and Setup**
 
-1.  **Install Java (OpenJDK 17):**
+1.  **Install Java (OpenJDK 21):**
     ```bash
     sudo apt install openjdk-21-jdk -y
     ```
@@ -305,9 +305,3 @@ pipeline {
 The CI/CD pipeline is now fully operational. Any `git push` to the `main` branch of the configured GitHub repository will automatically trigger the Jenkins pipeline, which will build the new Docker image and deploy the updated application, ensuring a seamless and automated workflow from development to production.
 
 
-### **9. Infrastructure Diagram**
-<img src="diagrams/Infrastructure.png">
-
-
-### **10. Work flow Diagram**
-<img src="diagrams/project_workflow.png">
