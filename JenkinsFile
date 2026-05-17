@@ -2,7 +2,7 @@ pipeline{
     agent any 
     stages('clone repo'){
         steps{
-           git branch: 'main', url: 'https://github.com/Rishik2121/DevOps-Project-Two-Tier-Flask-App'
+           git branch: 'main', url: 'https://github.com/Rishik-Devops/Two-Tier-app'
         }
     
     }
